@@ -1,15 +1,76 @@
+/* TYPOGRAPHIES - TT Hazelnut (en attendant QUICK MEAL JNL) */
+
+/* TT Hazelnut Regular - Corps de texte */
+@font-face {
+    font-family: 'TT Hazelnut';
+    src: url('../fonts/TT Hazelnuts Trial Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* TT Hazelnut Bold - Sous-titres & emphase */
+@font-face {
+    font-family: 'TT Hazelnut';
+    src: url('../fonts/TT Hazelnuts Trial Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* TT Hazelnut ExtraBold - Titres principaux */
+@font-face {
+    font-family: 'TT Hazelnut';
+    src: url('../fonts/TT Hazelnuts Trial ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* TT Hazelnut Heavy - Hero & Titres XXL */
+@font-face {
+    font-family: 'TT Hazelnut';
+    src: url('../fonts/TT Hazelnuts Trial Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* TT Hazelnut Light - Citations & texte secondaire */
+@font-face {
+    font-family: 'TT Hazelnut';
+    src: url('../fonts/TT Hazelnuts Trial Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* TODO: Remplacer par QUICK MEAL JNL quand disponible
+@font-face {
+    font-family: 'QUICK MEAL JNL';
+    src: url('../fonts/QuickMeal.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*/
+
 :root {
     --eb-red: #b22222;
     --eb-dark: #1a1a1a;
     --eb-white: #ffffff;
     --eb-grey: #f8f8f8;
     --eb-text: #333333;
+    
+    /* Typographies - TT Hazelnut uniquement pour le moment */
+    --font-title: 'TT Hazelnut', 'Impact', sans-serif;  /* TODO: Remplacer par 'QUICK MEAL JNL' */
+    --font-body: 'TT Hazelnut', 'Helvetica Neue', Arial, sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--font-body);
     color: var(--eb-text);
     background-color: var(--eb-white);
     line-height: 1.6;
@@ -42,7 +103,20 @@ body {
     z-index: 1;
 }
 
-.hero h1 { font-size: 4rem; text-transform: uppercase; letter-spacing: 5px; }
+.hero h1 { 
+    font-family: var(--font-title);
+    font-weight: 900; /* Heavy */
+    font-size: 4rem; 
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+}
+
+.hero-content p {
+    font-family: var(--font-body);
+    font-weight: 300; /* Light */
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
 
 /* Navigation */
 .main-nav {
@@ -60,6 +134,7 @@ body {
 }
 
 .main-nav a {
+    font-family: var(--font-body);
     color: white;
     text-decoration: none;
     padding: 0 1.5rem;
@@ -76,7 +151,40 @@ body {
 .section { padding: 4rem 2rem; border-radius: 8px; margin-bottom: 2rem; }
 .bg-light { background-color: var(--eb-grey); }
 
-h2 { color: var(--eb-red); margin-bottom: 2rem; text-transform: uppercase; font-size: 1.8rem; }
+h2 { 
+    font-weight: 800; /* ExtraBold */
+    color: var(--eb-red); 
+    margin-bottom: 2rem; 
+    text-transform: uppercase; 
+    font-size: 2.2rem; 
+    letter-spacing: 2px;
+}
+
+h3 { 
+    font-family: var(--font-title);
+    font-weight: 700; /* Bold */
+    font-size: 1.4rem; 
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-family: var(--font-body);
+    font-weight: 700; /* Bold */
+    font-size: 1.1rem;
+}
+
+p, li {
+    font-family: var(--font-body);
+    font-weight: 400; /* Regular */
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+strong {
+    font-weight: 700; /* Bold */
+    line-height: 1.7;
+}
 
 /* Grids */
 .calendar {
