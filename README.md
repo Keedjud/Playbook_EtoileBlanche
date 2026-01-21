@@ -40,6 +40,3 @@ Pour garder le site et les réseaux sociaux à jour, suivez la règle du **"Mini
 1.  **Modifier le texte** : Ouvrez `index.html` et modifiez les balises de texte (ex: mettre à jour le menu de la semaine).
 2.  **Changer une image** : Remplacez le fichier dans `assets/images/` en gardant le même nom de fichier.
 3.  **Déploiement** : Une fois vos modifications "pushées" sur la branche principale (main), GitHub Pages mettra le site à jour automatiquement.
-
----
-*Document conçu en partenariat avec Gemini - 2026*
