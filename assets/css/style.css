@@ -45,26 +45,16 @@
     font-display: swap;
 }
 
-/* TODO: Remplacer par QUICK MEAL JNL quand disponible
-@font-face {
-    font-family: 'QUICK MEAL JNL';
-    src: url('../fonts/QuickMeal.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-*/
-
 :root {
-    /* Palette modernisée inspirée du site et de la DA */
-    --eb-red: #B22234;          /* Rouge institutionnel */
-    --eb-red-dark: #8B1A28;     /* Rouge foncé pour hover */
-    --eb-dark: #1a1a1a;         /* Noir profond */
-    --eb-white: #ffffff;        /* Blanc pur */
-    --eb-grey-light: #f8f8f8;   /* Gris très clair */
-    --eb-grey: #e8e8e8;         /* Gris moyen */
-    --eb-text: #2a2a2a;         /* Texte principal */
-    --eb-text-light: #666666;   /* Texte secondaire */
+    /* Palette modernisée */
+    --eb-red: #B22234;
+    --eb-red-dark: #8B1A28;
+    --eb-dark: #1a1a1a;
+    --eb-white: #ffffff;
+    --eb-grey-light: #f8f8f8;
+    --eb-grey: #e8e8e8;
+    --eb-text: #2a2a2a;
+    --eb-text-light: #666666;
     
     /* Typographies */
     --font-title: 'TT Hazelnut', 'Impact', sans-serif;
@@ -85,7 +75,8 @@
     --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
-* { 
+/* Reset Global */ 
+* {
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
@@ -100,12 +91,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Hero Section Modernisé */
+/* Hero Section */
 .hero {
     height: 75vh;
     min-height: 500px;
@@ -365,43 +351,6 @@ strong {
     background: var(--eb-red-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-strong);
-}
-
-.bg-light { background-color: var(--eb-grey); }
-
-h2 { 
-    font-weight: 800; /* ExtraBold */
-    color: var(--eb-red); 
-    margin-bottom: 2rem; 
-    text-transform: uppercase; 
-    font-size: 2.2rem; 
-    letter-spacing: 2px;
-}
-
-h3 { 
-    font-family: var(--font-title);
-    font-weight: 700; /* Bold */
-    font-size: 1.4rem; 
-    margin-bottom: 0.8rem;
-    letter-spacing: 1px;
-}
-
-h4 {
-    font-family: var(--font-body);
-    font-weight: 700; /* Bold */
-    font-size: 1.1rem;
-}
-
-p, li {
-    font-family: var(--font-body);
-    font-weight: 400; /* Regular */
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-strong {
-    font-weight: 700; /* Bold */
-    line-height: 1.7;
 }
 
 /* Grids Modernisés */
