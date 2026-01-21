@@ -3,7 +3,7 @@
 /* TT Hazelnut Regular - Corps de texte */
 @font-face {
     font-family: 'TT Hazelnut';
-    src: url('../fonts/TT Hazelnuts Trial Regular.ttf') format('truetype');
+    src: url('../fonts/TT%20Hazelnuts%20Trial%20Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -12,7 +12,7 @@
 /* TT Hazelnut Bold - Sous-titres & emphase */
 @font-face {
     font-family: 'TT Hazelnut';
-    src: url('../fonts/TT Hazelnuts Trial Bold.ttf') format('truetype');
+    src: url('../fonts/TT%20Hazelnuts%20Trial%20Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -21,7 +21,7 @@
 /* TT Hazelnut ExtraBold - Titres principaux */
 @font-face {
     font-family: 'TT Hazelnut';
-    src: url('../fonts/TT Hazelnuts Trial ExtraBold.ttf') format('truetype');
+    src: url('../fonts/TT%20Hazelnuts%20Trial%20ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -30,7 +30,7 @@
 /* TT Hazelnut Heavy - Hero & Titres XXL */
 @font-face {
     font-family: 'TT Hazelnut';
-    src: url('../fonts/TT Hazelnuts Trial Heavy.ttf') format('truetype');
+    src: url('../fonts/TT%20Hazelnuts%20Trial%20Heavy.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -39,7 +39,7 @@
 /* TT Hazelnut Light - Citations & texte secondaire */
 @font-face {
     font-family: 'TT Hazelnut';
-    src: url('../fonts/TT Hazelnuts Trial Light.ttf') format('truetype');
+    src: url('../fonts/TT%20Hazelnuts%20Trial%20Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
