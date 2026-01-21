@@ -468,6 +468,239 @@ strong {
     letter-spacing: 1px;
 }
 
+/* ========== NOUVELLE SECTION VISION STRATÉGIQUE ========== */
+
+/* Strategy Lead */
+.strategy-lead {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 2rem 3rem;
+    background: linear-gradient(135deg, var(--eb-red) 0%, var(--eb-red-dark) 100%);
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+}
+
+.strategy-lead p {
+    color: var(--eb-white);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Strategy Grid Deep */
+.strategy-grid-deep {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* Strategy Cards */
+.strategy-card {
+    background: var(--eb-white);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-smooth);
+    border-left: 5px solid var(--eb-red);
+    position: relative;
+}
+
+.strategy-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-strong);
+    border-left-width: 8px;
+}
+
+/* Card Icon */
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.strategy-card h3 {
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--eb-red);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.strategy-card p {
+    color: var(--eb-text);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Business Logic */
+.business-logic {
+    background: var(--eb-grey-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--eb-red);
+    margin-top: 2rem;
+    margin-bottom: 0 !important;
+}
+
+.business-logic strong {
+    color: var(--eb-red);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* ========== STRATÉGIE TIMELINE (Section 1) ========== */
+
+.strategy-timeline {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 3px solid var(--eb-red);
+}
+
+.strategy-timeline h3 {
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--eb-red);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.timeline-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--eb-text);
+    padding: 0 2rem;
+}
+
+/* Timeline Phase */
+.timeline-phase {
+    background: var(--eb-white);
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-medium);
+    border-left: 6px solid var(--eb-red);
+    transition: var(--transition-smooth);
+}
+
+.timeline-phase:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* Phase Header */
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.phase-badge {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--eb-white);
+}
+
+.phase-badge.court-terme {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.phase-badge.moyen-terme {
+    background: linear-gradient(135deg, #f39c12 0%, #d68910 100%);
+}
+
+.phase-badge.long-terme {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+}
+
+.phase-header h4 {
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--eb-dark);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.phase-description {
+    font-size: 1.1rem;
+    color: var(--eb-text);
+    margin-bottom: 2rem;
+    font-style: italic;
+    padding-left: 1rem;
+    border-left: 3px solid var(--eb-grey-light);
+}
+
+/* Phase Actions */
+.phase-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.action-item {
+    background: var(--eb-grey-light);
+    padding: 1.8rem;
+    border-radius: 10px;
+    transition: var(--transition-smooth);
+    border-top: 3px solid transparent;
+}
+
+.action-item:hover {
+    background: #ffffff;
+    border-top-color: var(--eb-red);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-subtle);
+}
+
+.action-item strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--eb-red);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.action-item p {
+    margin: 0;
+    line-height: 1.7;
+    color: var(--eb-text);
+}
+
+.action-item ul {
+    margin: 0.8rem 0 0 0;
+    padding-left: 1.5rem;
+}
+
+.action-item li {
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+    color: var(--eb-text);
+}
+
+.action-item li strong {
+    display: inline;
+    font-size: inherit;
+    color: var(--eb-dark);
+}
+
 /* Vision Cards Modernisées */
 .vision-points {
     display: grid;
@@ -1082,8 +1315,61 @@ strong {
     .vision-points, 
     .assets-grid,
     .maintenance-grid,
-    .color-palette { 
+    .color-palette,
+    .strategy-grid-deep { 
         grid-template-columns: 1fr; 
+    }
+    
+    /* Strategy lead responsive */
+    .strategy-lead {
+        padding: 1.5rem;
+    }
+    
+    .strategy-lead p {
+        font-size: 1.05rem;
+    }
+    
+    /* Strategy cards responsive */
+    .strategy-card {
+        padding: 2rem;
+    }
+    
+    .card-icon {
+        font-size: 2.5rem;
+    }
+    
+    /* Timeline responsive */
+    .phase-actions {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-phase {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .timeline-phase:hover {
+        transform: translateX(0);
+    }
+    
+    .phase-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .phase-header h4 {
+        font-size: 1.4rem;
+    }
+    
+    .strategy-timeline h3 {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .timeline-intro {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
     
     /* Marketing de table */
