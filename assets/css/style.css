@@ -552,7 +552,34 @@ strong {
     letter-spacing: 1px;
 }
 
-/* ========== STRATÉGIE TIMELINE (Section 1) ========== */
+/* ========== SECTION STRATÉGIE GLOBALE (Section 2) ========== */
+
+.strategy-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+}
+
+.strategy-section h2 {
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: var(--eb-red);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.timeline-intro {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--eb-text);
+    padding: 0 2rem;
+}
+
+/* ========== STRATÉGIE TIMELINE (déjà existant) ========== */
 
 .strategy-timeline {
     margin-top: 4rem;
