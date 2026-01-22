@@ -138,28 +138,28 @@ body {
 .hero-subtitle {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid var(--secondary);
+    background: linear-gradient(135deg, var(--secondary) 0%, #c44a00 100%);
+    border-left: none;
     border-radius: 8px;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle p {
     font-size: 1rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
     margin: 0;
 }
 
 .hero-subtitle strong {
-    color: var(--secondary);
+    color: white;
     font-weight: 700;
 }
 
 .hero-video-container {
     position: relative;
     border-radius: 16px;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     animation: fadeInRight 1s ease;
 }
@@ -169,6 +169,29 @@ body {
     height: 100%;
     display: block;
     object-fit: cover;
+    border-radius: 16px;
+}
+
+.video-download-link {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--secondary) 0%, #c44a00 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.video-download-link:hover {
+    background: linear-gradient(135deg, #c44a00 0%, var(--secondary) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 @keyframes fadeInLeft {
@@ -203,7 +226,73 @@ body {
     border-bottom: 1px solid var(--eb-grey);
 }
 
-.main-nav ul {
+/* Bouton hamburger - caché par défaut sur desktop */
+.nav-toggle {
+    display: none;
+    background: white;
+    border: 2px solid var(--eb-grey);
+    cursor: pointer;
+    padding: 0;
+    position: fixed;
+    right: 1.5rem;
+    top: 1rem;
+    border-radius: 8px;
+    z-index: 101;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border-color: var(--eb-red-dark);
+}
+
+.hamburger {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: var(--eb-red-dark);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    background: var(--eb-red-dark);
+    transition: all 0.3s ease;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+.nav-toggle.active .hamburger {
+    background: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+.nav-menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1697,19 +1786,83 @@ strong {
         padding: 1rem;
     }
     
+    /* Navigation hamburger responsive */
+    .nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .main-nav {
+        position: relative;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--eb-white);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 4rem 0 2rem;
+        gap: 0;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+        z-index: 99;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .main-nav a {
+        display: block;
+        width: 100%;
+        padding: 1.2rem 2rem;
+        font-size: 0.9rem;
+        text-align: left;
+    }
+    
+    .main-nav a::after {
+        display: none;
+    }
+    
+    .main-nav a:hover,
+    .main-nav a.active {
+        background: rgba(219, 85, 44, 0.1);
+        color: var(--eb-red);
+    }
+    
+    /* Overlay pour fermer le menu en cliquant en dehors */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 98;
+    }
+    
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
     /* Layout de base */
     .grid-assets, .comparison-grid { grid-template-columns: 1fr; }
-    
-    /* Navigation responsive */
-    .main-nav ul { 
-        flex-wrap: wrap; 
-        justify-content: flex-start; 
-        padding: 0.5rem;
-    }
-    .main-nav a { 
-        padding: 0.5rem 0.8rem; 
-        font-size: 0.7rem; 
-    }
     
     /* Nouvelles sections responsive */
     .key-principles, 
@@ -3083,10 +3236,102 @@ strong {
 }
 
 /* ============================================
+   SECTION GLAÇON BRANDÉ
+   ============================================ */
+
+.glacon-concept {
+    background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+}
+
+.glacon-presentation {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+    margin: 3rem 0;
+}
+
+.glacon-image {
+    position: sticky;
+    top: 100px;
+}
+
+.glacon-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.glacon-image img:hover {
+    transform: scale(1.05);
+}
+
+.glacon-content h3 {
+    color: var(--primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.glacon-content h3:first-child {
+    margin-top: 0;
+}
+
+.glacon-content p {
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+}
+
+.glacon-content strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* ============================================
    RESPONSIVE - CAPTIONS & HASHTAGS
    ============================================ */
 
 @media (max-width: 768px) {
+    /* Hero responsive */
+    .hero {
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero-video-container {
+        order: -1;
+    }
+    
+    .hero h1 { 
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        padding: 1rem;
+    }
+    
+    .video-download-link {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    /* Glaçon responsive */
+    .glacon-presentation {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .glacon-image {
+        position: static;
+    }
+    
     /* Budget responsive */
     .budget-total-card {
         flex-direction: column;

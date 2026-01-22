@@ -1,6 +1,46 @@
 // ========== PLAYBOOK ÉTOILE BLANCHE 2026 ==========
 // Script de modernisation inspiré du site web et de la nouvelle DA
 
+// ========== MOBILE NAVIGATION HAMBURGER ==========
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    // Créer l'overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+    
+    // Toggle menu
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // Fermer le menu en cliquant sur l'overlay
+    overlay.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
+    // Fermer le menu en cliquant sur un lien
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+});
+
 // ========== SMOOTH SCROLL NAVIGATION ==========
 document.querySelectorAll('.main-nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
