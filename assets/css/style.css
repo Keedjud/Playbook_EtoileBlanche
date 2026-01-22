@@ -1307,6 +1307,121 @@ strong {
     color: #888;
 }
 
+/* Logo Display pour Assets */
+.logo-display {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* GitHub Links */
+.github-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* Canva Templates Grid */
+.canva-templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.canva-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.canva-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.canva-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.canva-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.canva-card h4 {
+    padding: 1.5rem 1.5rem 1rem;
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.canva-btn {
+    display: block;
+    background: linear-gradient(135deg, var(--primary) 0%, #1a5c8a 100%);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    margin: 0 1.5rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.canva-btn:hover {
+    background: linear-gradient(135deg, #1a5c8a 0%, var(--primary) 100%);
+    transform: scale(1.02);
+}
+
+/* Multi-links pour Carte du Soir */
+.canva-card.multi-links h4 {
+    padding-bottom: 0.5rem;
+}
+
+.canva-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.canva-btn-small {
+    background: linear-gradient(135deg, var(--secondary) 0%, #c44a00 100%);
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.canva-btn-small:hover {
+    background: linear-gradient(135deg, #c44a00 0%, var(--secondary) 100%);
+    transform: scale(1.02);
+}
+
 .maintenance-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
