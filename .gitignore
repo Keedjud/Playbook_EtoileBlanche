@@ -1,0 +1,23 @@
+# Fichiers de développement (garder les sources, ignorer les builds)
+# Aucun fichier à ignorer pour ce projet statique
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Fichiers temporaires
+*.tmp
+*.temp
+.cache/
