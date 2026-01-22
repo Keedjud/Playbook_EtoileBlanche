@@ -867,9 +867,13 @@ strong {
 
 .standups-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
     margin-top: 2rem;
+}
+
+.standups-visual {
+    order: -1;
 }
 
 .standups-list {
@@ -1484,26 +1488,43 @@ strong {
 /* Section 5 : Stand-ups Examples Grid */
 .standup-examples-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
     margin-top: 1rem;
 }
 
 .standup-examples-grid figure {
     text-align: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+    border: 2px solid var(--eb-grey-light);
+}
+
+.standup-examples-grid figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    border-color: var(--secondary);
 }
 
 .standup-examples-grid img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: var(--shadow-medium);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .standup-examples-grid figcaption {
-    margin-top: 0.8rem;
-    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-size: 1rem;
     color: var(--eb-text);
+    font-weight: 500;
+}
+
+.standup-examples-grid figcaption strong {
+    color: var(--primary);
 }
 
 /* Section 6 : Photo Examples Grid */
@@ -1598,5 +1619,829 @@ strong {
     .photo-examples-grid img,
     .reference-grid img {
         height: 200px;
+    }
+}
+
+/* ========== SECTION RÉSEAUX SOCIAUX COMPLÈTE ========== */
+
+/* Section Social Strategy */
+.social-strategy {
+    background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+}
+
+/* PARTIE 1 : Vision et Objectifs */
+.social-vision {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.vision-lead {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--eb-text);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pillar-card {
+    background: var(--eb-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-smooth);
+    border-top: 4px solid var(--eb-red);
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.pillar-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.pillar-card h4 {
+    color: var(--eb-red);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+/* PARTIE 2 : Écosystème */
+.ecosystem-section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.platform-card {
+    background: var(--eb-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-smooth);
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+}
+
+.platform-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.platform-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.instagram .platform-badge {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.facebook .platform-badge {
+    background: #1877f2;
+}
+
+.tiktok .platform-badge {
+    background: #000000;
+}
+
+.priority-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: var(--eb-grey-light);
+    color: var(--eb-dark);
+}
+
+.platform-card h4 {
+    font-size: 1.4rem;
+    color: var(--eb-dark);
+    margin-bottom: 0.8rem;
+}
+
+.platform-card ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.platform-card li {
+    margin-bottom: 0.6rem;
+}
+
+.platform-action {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--eb-grey-light);
+    border-left: 3px solid var(--eb-red);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Tools Section */
+.tools-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--eb-grey-light);
+    border-radius: 12px;
+}
+
+.tools-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.tool-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.tool-item strong {
+    display: block;
+    color: var(--eb-red);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* PARTIE 3 : Ligne Éditoriale */
+.editorial-line {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.tone-box {
+    background: linear-gradient(135deg, var(--eb-red) 0%, var(--eb-red-dark) 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.tone-box h4 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.tone-box ul {
+    margin-top: 1rem;
+}
+
+.golden-rules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.rule-card {
+    background: var(--eb-white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-subtle);
+    border-left: 4px solid var(--eb-red);
+}
+
+.rule-card h4 {
+    color: var(--eb-red);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* PARTIE 4 : Calendrier */
+.weekly-calendar {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.calendar-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--eb-text);
+}
+
+.calendar-table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.calendar-row {
+    display: grid;
+    grid-template-columns: 120px 100px 1fr 250px;
+    border-bottom: 1px solid var(--eb-grey-light);
+}
+
+.calendar-row.header-row {
+    background: var(--eb-dark);
+    color: white;
+    font-weight: 700;
+}
+
+.calendar-row.highlight-row {
+    background: #fff8f0;
+    border-left: 4px solid var(--eb-red);
+}
+
+.calendar-row > div {
+    padding: 1.5rem;
+    border-right: 1px solid var(--eb-grey-light);
+}
+
+.calendar-row > div:last-child {
+    border-right: none;
+}
+
+.cal-day {
+    font-weight: 700;
+    color: var(--eb-red);
+}
+
+.cal-time {
+    font-weight: 700;
+    color: var(--eb-dark);
+}
+
+.cal-content strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--eb-red);
+}
+
+.cal-content p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.cal-tips {
+    font-size: 0.85rem;
+    color: var(--eb-text-light);
+    font-style: italic;
+}
+
+.calendar-note {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--eb-grey-light);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* PARTIE 5 : Réputation */
+.reputation-section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.reputation-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--eb-grey-light);
+    border-radius: 8px;
+}
+
+.response-guide {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.response-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+}
+
+.response-card.positive {
+    border-top: 4px solid #27ae60;
+}
+
+.response-card.neutral {
+    border-top: 4px solid #f39c12;
+}
+
+.response-card.negative {
+    border-top: 4px solid #e74c3c;
+}
+
+.response-card h4 {
+    margin-bottom: 1rem;
+}
+
+.response-example {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--eb-grey-light);
+    border-radius: 8px;
+}
+
+.example-label {
+    font-weight: 700;
+    color: var(--eb-red);
+    margin-bottom: 0.8rem;
+}
+
+.response-example em {
+    display: block;
+    line-height: 1.7;
+}
+
+.warning-note {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: #fff3cd;
+    border-left: 3px solid #f39c12;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* PARTIE 6 : Leviers de croissance */
+.growth-levers {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.lever-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.lever-card {
+    background: var(--eb-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-smooth);
+    border-top: 4px solid var(--eb-red);
+}
+
+.lever-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+}
+
+.lever-card h4 {
+    color: var(--eb-red);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.lever-action {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #e8f5e9;
+    border-left: 3px solid #27ae60;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Responsive pour section Réseaux Sociaux */
+@media (max-width: 1024px) {
+    .pillars-grid,
+    .platform-grid,
+    .golden-rules,
+    .response-guide,
+    .lever-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .calendar-row {
+        grid-template-columns: 100px 80px 1fr 200px;
+        font-size: 0.9rem;
+    }
+    
+    .calendar-row > div {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pillars-grid,
+    .platform-grid,
+    .golden-rules,
+    .tools-list,
+    .response-guide,
+    .lever-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calendar-row {
+        grid-template-columns: 1fr;
+        border-bottom: 2px solid var(--eb-grey-light);
+    }
+    
+    .calendar-row > div {
+        border-right: none;
+        border-bottom: 1px solid var(--eb-grey-light);
+        padding: 1rem;
+    }
+    
+    .cal-day::before {
+        content: "Jour: ";
+        font-weight: normal;
+        color: var(--eb-text);
+    }
+    
+    .cal-time::before {
+        content: "Heure: ";
+        font-weight: normal;
+        color: var(--eb-text);
+    }
+}
+
+/* ============================================
+   SECTION RÉSEAUX SOCIAUX - CAPTIONS TYPES
+   ============================================ */
+
+.captions-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid var(--secondary);
+}
+
+.captions-intro {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.caption-examples {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.caption-card {
+    background: white;
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.caption-card.highlight {
+    border-left-color: var(--secondary);
+    background: linear-gradient(135deg, #ffffff 0%, #fff9f5 100%);
+}
+
+.caption-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.caption-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.caption-tag {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.day-tag {
+    background: var(--secondary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.caption-text {
+    margin-bottom: 1rem;
+}
+
+.caption-text:last-child {
+    margin-bottom: 0;
+}
+
+.caption-text strong {
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.caption-example {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+    white-space: pre-line;
+    border: 1px solid #e9ecef;
+}
+
+.caption-tips {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.caption-tips h4 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.caption-tips ul {
+    list-style: none;
+    padding: 0;
+}
+
+.caption-tips li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+    line-height: 1.6;
+    color: var(--text);
+    position: relative;
+}
+
+.caption-tips li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.caption-tips li:last-child {
+    border-bottom: none;
+}
+
+.caption-tips strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ============================================
+   SECTION RÉSEAUX SOCIAUX - HASHTAGS
+   ============================================ */
+
+.hashtags-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid var(--secondary);
+}
+
+.hashtags-intro {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.hashtags-intro strong {
+    color: var(--primary);
+}
+
+.hashtag-strategy {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.hashtag-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.hashtag-category h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.category-desc {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.category-desc strong {
+    color: var(--primary);
+}
+
+.hashtag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.hashtag {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #495057;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.hashtag:hover {
+    background: linear-gradient(135deg, var(--primary) 0%, #1a5c8a 100%);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.hashtag-list.branded .hashtag.brand {
+    background: linear-gradient(135deg, var(--secondary) 0%, #c44a00 100%);
+    color: white;
+    border-color: var(--secondary);
+    font-weight: 600;
+}
+
+.theme-block {
+    margin-bottom: 1.5rem;
+}
+
+.theme-block:last-child {
+    margin-bottom: 0;
+}
+
+.theme-block p strong {
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.brand-note {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #fff9f5;
+    border-left: 4px solid var(--secondary);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.hashtag-examples {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.hashtag-examples h4 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.hashtag-combo {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.hashtag-combo:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.hashtag-combo p strong {
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.combo-text {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
+.hashtag-rules {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--secondary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.hashtag-rules h4 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.hashtag-rules ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hashtag-rules li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: var(--text);
+    position: relative;
+}
+
+.hashtag-rules li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.hashtag-rules li:last-child {
+    border-bottom: none;
+}
+
+.hashtag-rules strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ============================================
+   RESPONSIVE - CAPTIONS & HASHTAGS
+   ============================================ */
+
+@media (max-width: 768px) {
+    .caption-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .caption-example {
+        font-size: 0.9rem;
+    }
+    
+    .caption-tips,
+    .hashtag-rules {
+        padding: 1.5rem;
+    }
+    
+    .hashtag-category {
+        padding: 1.5rem;
+    }
+    
+    .hashtag-examples {
+        padding: 1.5rem;
+    }
+    
+    .combo-text {
+        font-size: 0.85rem;
     }
 }
