@@ -1307,12 +1307,96 @@ strong {
     color: #888;
 }
 
-/* Logo Display pour Assets */
-.logo-display {
-    max-width: 150px;
+/* ============================================
+   LOGOS SECTION - SHOWCASE
+   ============================================ */
+.logo-versions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin: 2rem 0;
+}
+
+.logo-item {
+    text-align: center;
+}
+
+.logo-container {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.logo-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: var(--primary);
+}
+
+.logo-container.dark {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    border-color: #2c3e50;
+}
+
+.logo-container.small {
+    min-height: 180px;
+    padding: 1.5rem;
+}
+
+.logo-display-large {
+    max-width: 200px;
     height: auto;
-    margin: 0 auto;
     display: block;
+}
+
+.logo-display-medium {
+    max-width: 120px;
+    height: auto;
+    display: block;
+}
+
+.logo-item p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.logo-item p strong {
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.asset-file {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #6c757d;
+    background: #f8f9fa;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.logo-usage {
+    font-size: 0.85rem;
+    color: #6c757d;
+    line-height: 1.8;
+    margin-top: 0.75rem;
+}
+
+.logo-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e9ecef;
 }
 
 /* GitHub Links */
@@ -1328,7 +1412,9 @@ strong {
     text-decoration: underline;
 }
 
-/* Canva Templates Grid */
+/* ============================================
+   CANVA TEMPLATES - CLICKABLE CARDS
+   ============================================ */
 .canva-templates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1337,14 +1423,27 @@ strong {
     margin-bottom: 3rem;
 }
 
+/* Lien wrapper pour toute la carte */
+.canva-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
 .canva-card {
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
+.canva-card-link:hover .canva-card,
 .canva-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -1368,58 +1467,88 @@ strong {
 }
 
 .canva-card h4 {
-    padding: 1.5rem 1.5rem 1rem;
+    padding: 1.5rem 1.5rem 1.5rem;
     margin: 0;
     font-size: 1.1rem;
     color: var(--primary);
 }
 
-.canva-btn {
-    display: block;
-    background: linear-gradient(135deg, var(--primary) 0%, #1a5c8a 100%);
-    color: white;
-    text-decoration: none;
-    padding: 0.75rem 1.5rem;
-    margin: 0 1.5rem 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 600;
-    transition: all 0.3s ease;
+/* Carte du Soir - Style spécial avec 4 versions */
+.canva-card.carte-soir-special {
+    cursor: default;
 }
 
-.canva-btn:hover {
-    background: linear-gradient(135deg, #1a5c8a 0%, var(--primary) 100%);
-    transform: scale(1.02);
-}
-
-/* Multi-links pour Carte du Soir */
-.canva-card.multi-links h4 {
+.canva-card.carte-soir-special h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
     padding-bottom: 0.5rem;
 }
 
-.canva-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.version-badge {
+    font-size: 0.75rem;
+    background: var(--secondary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.carte-soir-desc {
+    padding: 0 1.5rem 1rem;
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.canva-links-vertical {
+    display: flex;
+    flex-direction: column;
     gap: 0.75rem;
     padding: 0 1.5rem 1.5rem;
 }
 
-.canva-btn-small {
-    background: linear-gradient(135deg, var(--secondary) 0%, #c44a00 100%);
-    color: white;
+.canva-link-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
     text-decoration: none;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 0.9rem;
+    color: var(--text);
     transition: all 0.3s ease;
-    display: block;
 }
 
-.canva-btn-small:hover {
-    background: linear-gradient(135deg, #c44a00 0%, var(--secondary) 100%);
-    transform: scale(1.02);
+.canva-link-item:hover {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.link-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.link-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.link-content strong {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.link-content small {
+    color: var(--text-light);
+    font-size: 0.85rem;
 }
 
 .maintenance-grid {
