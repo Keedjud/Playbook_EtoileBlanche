@@ -2785,10 +2785,342 @@ strong {
 }
 
 /* ============================================
+   SECTION BUDGET
+   ============================================ */
+
+.budget-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+/* Résumé Total */
+.budget-summary {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.budget-total-card {
+    background: linear-gradient(135deg, var(--primary) 0%, #1a5c8a 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.budget-icon {
+    font-size: 4rem;
+    opacity: 0.9;
+}
+
+.budget-total-content h3 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+.budget-amount-large {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 0.5rem 0;
+    font-family: var(--font-title);
+}
+
+.budget-subtitle {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin: 0;
+}
+
+/* Grille des catégories */
+.budget-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.budget-category {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.budget-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.budget-category-header {
+    background: linear-gradient(135deg, var(--secondary) 0%, #c44a00 100%);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.budget-category-icon {
+    font-size: 2rem;
+}
+
+.budget-category-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.budget-category-content {
+    padding: 1.5rem;
+}
+
+.category-description {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.budget-line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.budget-line-item.optional {
+    background: #fff9f5;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem -0.5rem;
+    border-radius: 6px;
+    border: 1px dashed #ffc107;
+}
+
+.item-label {
+    flex: 1;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.item-label small {
+    display: block;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.item-value {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1rem;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+.budget-subtotal-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    margin-top: 0.5rem;
+    border-top: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+.subtotal-label {
+    color: var(--text);
+}
+
+.subtotal-value {
+    color: var(--primary);
+}
+
+.budget-total-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.total-label {
+    color: var(--eb-dark);
+}
+
+.total-value {
+    color: var(--secondary);
+    font-size: 1.3rem;
+}
+
+.budget-note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.optional-note {
+    background: #fff9f5;
+    padding: 0.75rem;
+    border-left: 3px solid #ffc107;
+    border-radius: 4px;
+}
+
+/* Footer Budget */
+.budget-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.budget-recommendation,
+.budget-breakdown {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.budget-recommendation h4,
+.budget-breakdown h4 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.budget-recommendation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.budget-recommendation li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid #f8f9fa;
+    position: relative;
+    line-height: 1.6;
+}
+
+.budget-recommendation li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.budget-recommendation li:last-child {
+    border-bottom: none;
+}
+
+.budget-recommendation strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Graphique de répartition */
+.breakdown-chart {
+    margin-top: 1.5rem;
+}
+
+.breakdown-bar {
+    display: flex;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.bar-segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.bar-segment:hover {
+    filter: brightness(1.1);
+    transform: scaleY(1.05);
+}
+
+.bar-segment.web {
+    background: linear-gradient(135deg, var(--primary) 0%, #1a5c8a 100%);
+}
+
+.bar-segment.gobelets {
+    background: linear-gradient(135deg, var(--secondary) 0%, #c44a00 100%);
+}
+
+.bar-segment.supports {
+    background: linear-gradient(135deg, #28a745 0%, #20803a 100%);
+}
+
+.bar-segment.impression {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+}
+
+.bar-label {
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* ============================================
    RESPONSIVE - CAPTIONS & HASHTAGS
    ============================================ */
 
 @media (max-width: 768px) {
+    /* Budget responsive */
+    .budget-total-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .budget-icon {
+        font-size: 3rem;
+    }
+    
+    .budget-amount-large {
+        font-size: 2.5rem;
+    }
+    
+    .budget-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .budget-footer {
+        grid-template-columns: 1fr;
+    }
+    
+    .breakdown-bar {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .bar-segment {
+        min-height: 60px;
+        width: 100% !important;
+    }
+    
+    /* Captions & Hashtags */
     .caption-header {
         flex-direction: column;
         align-items: flex-start;
