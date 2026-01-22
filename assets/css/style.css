@@ -1086,6 +1086,86 @@ strong {
     text-align: center;
 }
 
+/* Section Analyse & KPIs */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.kpi-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--primary);
+}
+
+.kpi-card h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.kpi-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.kpi-card li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 1.6;
+}
+
+.kpi-card li:last-child {
+    border-bottom: none;
+}
+
+.kpi-card strong {
+    color: var(--primary);
+}
+
+.kpi-tool {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.analysis-schedule {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+    border: 2px solid var(--secondary);
+}
+
+.analysis-schedule h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.analysis-schedule ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.analysis-schedule li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.analysis-tip {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #fff9f5;
+    border-left: 4px solid var(--secondary);
+    border-radius: 6px;
+}
+
 /* Assets Library */
 .assets-library {
     background: #fafafa;
