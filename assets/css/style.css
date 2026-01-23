@@ -519,6 +519,136 @@ strong {
     line-height: 1.6;
 }
 
+.reliure-note {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-radius: 8px;
+    border-left: 4px solid var(--eb-red);
+}
+
+.reliure-note p {
+    margin: 0 0 0.8rem 0;
+    font-size: 0.9rem;
+    color: var(--eb-dark);
+    font-weight: 600;
+}
+
+.reliure-note ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    list-style: none;
+}
+
+.reliure-note ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--eb-text);
+    line-height: 1.5;
+}
+
+.reliure-note ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--eb-red);
+    font-weight: 700;
+}
+
+.reliure-note ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Design Rules Section */
+.design-rules {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.design-rules h4 {
+    color: var(--eb-red);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rules-intro {
+    font-size: 1rem;
+    color: var(--eb-text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.rule-card {
+    background: var(--eb-white);
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-subtle);
+    border-left: 4px solid var(--eb-red);
+}
+
+.rule-card h5 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.specs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.specs-list li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    color: var(--eb-text);
+    line-height: 1.5;
+}
+
+.specs-list li:last-child {
+    border-bottom: none;
+}
+
+.specs-list li strong {
+    color: var(--primary);
+    font-weight: 600;
+    display: inline-block;
+    min-width: 130px;
+}
+
+.specs-list .exception {
+    color: var(--eb-red);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .rules-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .design-rules {
+        padding: 1.5rem;
+    }
+}
+
 /* ========== NOUVELLES SECTIONS ========== */
 
 /* Section Introduction */
