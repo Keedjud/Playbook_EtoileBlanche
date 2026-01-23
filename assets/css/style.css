@@ -1823,8 +1823,8 @@ strong {
 }
 
 .logo-container.dark {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    border-color: #2c3e50;
+    background: #1a1a1a;
+    border-color: #1a1a1a;
 }
 
 .logo-container.small {
