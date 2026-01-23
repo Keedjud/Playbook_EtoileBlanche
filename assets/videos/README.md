@@ -8,7 +8,7 @@ La vidéo horizontale est destinée au site web. Nous recommandons que celle-ci 
 
 Elle devra être mise, par défaut, sans son, avec la possibilité de l'activer (d'où la présence de sous-titres).
 
-<a href="./video_etoile_blanche_horizontal.mp4" download>📥 Télécharger la vidéo horizontale</a>
+<a href="[./video_etoile_blanche_horizontal.mp4](https://github.com/Keedjud/Playbook_EtoileBlanche/raw/refs/heads/main/assets/videos/video_etoile_blanche_horizontal.mp4)">📥 Télécharger la vidéo horizontale</a>
 
 ## Vidéo verticale
 
@@ -18,4 +18,4 @@ Le but de cette vidéo est d'être mise sur instagram en tant que reels épingl�
 
 En fonction de la stratiégie mise en place, elle pourra également être diffusée sur facebook et/ou instagram. 
 
-<a href="./video_etoile_blanche_vertical.mp4" download>📥 Télécharger la vidéo verticale</a>
+<a href="[./](https://github.com/Keedjud/Playbook_EtoileBlanche/raw/refs/heads/main/assets/videos/video_etoile_blanche_vertical.mp4)">📥 Télécharger la vidéo verticale</a>
