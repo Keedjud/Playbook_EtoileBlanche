@@ -917,6 +917,149 @@ strong {
     padding: 0 2rem;
 }
 
+/* ========== VALEURS & VISION ========== */
+
+.values-section {
+    margin: 4rem 0;
+    padding: 3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.values-section h3 {
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--eb-red);
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.values-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--eb-text);
+}
+
+/* Golden Circle */
+.golden-circle {
+    display: grid;
+    gap: 1.5rem;
+    margin: 3rem 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle-item {
+    padding: 1.8rem;
+    border-radius: 10px;
+    border-left: 5px solid;
+    background: linear-gradient(to right, rgba(178, 34, 52, 0.03) 0%, white 100%);
+}
+
+.circle-item.why {
+    border-left-color: var(--eb-red);
+}
+
+.circle-item.how {
+    border-left-color: #ff6b6b;
+}
+
+.circle-item.what {
+    border-left-color: #4ecdc4;
+}
+
+.circle-label {
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--eb-red);
+    margin-bottom: 0.8rem;
+}
+
+.circle-item p {
+    margin: 0;
+    line-height: 1.7;
+    color: var(--eb-text);
+}
+
+/* Core Values */
+.core-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    border-color: var(--eb-red);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(178, 34, 52, 0.12);
+}
+
+.value-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.value-card h4 {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--eb-dark);
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.value-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.value-points li {
+    padding: 0.7rem 0;
+    line-height: 1.6;
+    color: var(--eb-text);
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.value-points li:last-child {
+    border-bottom: none;
+}
+
+.value-points li strong {
+    color: var(--eb-red);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .values-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .core-values {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ========== STRATÉGIE TIMELINE (déjà existant) ========== */
 
 .strategy-timeline {
